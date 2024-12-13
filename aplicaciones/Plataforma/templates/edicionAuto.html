@@ -1,0 +1,41 @@
+
+{%extends "./base.html" %}
+{% block title %}Edición de Auto{% endblock %}
+{%block body%}
+<div class="row">
+ <div class="col-md-4 offset-md-4">
+  <div class="card">
+   <div class="card-body">
+    <form action="/editarAuto/" method="POST">{%csrf_token%}
+     <div class="form-group">
+      <label for="txtPatente">Marca</label>
+      <input type="text" id="txtPatente" name="txtPatente" value="{{auto.patente}}" class="form-control" placeholder="Patente" minlength="6" maxlength="7" required readonly style="margin-bottom: .3rem;">
+     </div>
+    <div class="form-group">
+      <label for="numKm">Km</label>
+        <input type="text" id="numKm" name="numKm" value="{{auto.km}}" class="form-control" placeholder="Km" required>
+    </div>
+       <div class="form-group">
+     <div class="form-group">
+      <label for="numPrecio">Precio</label>
+      <input type="text" id="numPrecio" name="numPrecio" value="{{auto.precio}}" class="form-control" placeholder="Precio" required>
+     </div>
+     <div class="form-group">
+      <label for="txtTipo">Tipo</label>
+      <input type="text" id="txtTipo" name="txtTipo" value="{{auto.tipo}}" class="form-control" placeholder="Tipo" required>
+     </div>
+
+     <div class="form-group">
+      <label for="txtDisponibilidad">Disponibilidad</label>
+      <input type="text" id="txtDisponibilidad" name="txtDisponibilidad" value="{{auto.disponibilidad}}" class="form-control" placeholder="Disponibilidad" required>
+     </div>
+     <div>
+      <button type="submit" class="btn btn-success btn-block text-white">Editar Auto</button>
+     </div>
+     
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+{%endblock%} 

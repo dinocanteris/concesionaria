@@ -1,0 +1,15 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    font-family: Arial, sans-serif;
+    background: rgb(224, 234, 240);
+}
+
+input {
+    margin-bottom: 4.8rem;
+}
